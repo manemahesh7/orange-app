@@ -9,12 +9,12 @@ import { DetailsModalComponent } from '../details-modal/details-modal.component'
 })
 export class PersonalInfoComponent implements OnInit {
   list = [
-    { title: 'Nodejs' },
-    { title: 'Javascript' },
-    { title: 'Angular' },
-    { title: 'express' },
-    { title: 'ajax' },
-    { title: 'bootstrap' },
+    { title: 'Nodejs', show: false },
+    { title: 'Javascript', show: true },
+    { title: 'Angular', show: true },
+    { title: 'express', show: true },
+    { title: 'ajax', show: true },
+    { title: 'bootstrap', show: true },
   ];
 
   constructor(private modalService: NgbModal) {}

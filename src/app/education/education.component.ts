@@ -3,13 +3,21 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-education',
   templateUrl: './education.component.html',
-  styleUrls: ['./education.component.css']
+  styleUrls: ['./education.component.css'],
 })
 export class EducationComponent implements OnInit {
+  public imgsrc = 'assets/me.jpg';
 
-  constructor() { }
+  public list = [
+    { img: 'assets/me.jpg' },
+    { img: 'assets/me.jpg' },
+    { img: 'assets/me.jpg' },
+    { img: 'assets/me.jpg' },
+    { img: 'assets/me.jpg' },
+    { img: 'assets/me.jpg' },
+  ];
 
-  ngOnInit(): void {
-  }
+  constructor() {}
 
+  ngOnInit(): void {}
 }
