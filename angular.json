@@ -144,6 +144,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "orange-app"
+    }
+  },
+  "defaultProject": "orange-app",
+  "cli": {
+    "analytics": false
+  }
 }
