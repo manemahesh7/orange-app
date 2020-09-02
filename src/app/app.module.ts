@@ -17,7 +17,17 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LogoutModalComponent } from './logout-modal/logout-modal.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, RegisterComponent, PageNotFoundComponent, HomeComponent, PersonalInfoComponent, EducationComponent, ContactUsComponent, LogoutModalComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    RegisterComponent,
+    PageNotFoundComponent,
+    HomeComponent,
+    PersonalInfoComponent,
+    EducationComponent,
+    ContactUsComponent,
+    LogoutModalComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

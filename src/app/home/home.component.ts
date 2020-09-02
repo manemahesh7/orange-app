@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { faAirFreshener } from '@fortawesome/free-solid-svg-icons';
 
+import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { LogoutModalComponent } from '../logout-modal/logout-modal.component';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -9,7 +12,7 @@ import { faAirFreshener } from '@fortawesome/free-solid-svg-icons';
 })
 export class HomeComponent implements OnInit {
   public faAirFreshener = faAirFreshener;
-  constructor(private router: Router) {}
+  constructor(private router: Router, private modalService: NgbModal) {}
 
   ngOnInit(): void {
     if (!sessionStorage.getItem('sid')) {
@@ -18,7 +21,12 @@ export class HomeComponent implements OnInit {
   }
 
   processLogout() {
-    sessionStorage.removeItem('sid');
-    this.router.navigate(['login']);
+    // sessionStorage.removeItem('sid');
+    // this.router.navigate(['login']);
+
+    // open modal
+    this.modalService.open(LogoutModalComponent, {
+      centered: true,
+    });
   }
 }
