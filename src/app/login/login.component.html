@@ -1,1 +1,55 @@
-<p>login works!</p>
+<div class="container-fluid">
+  <div class="row" style="height: 100vh">
+    <!-- Left Block -->
+    <div
+      class="col bg-warning d-flex flex-column justify-content-center align-items-center"
+    >
+      <div>
+        <fa-icon [icon]="faAirFreshener" style="font-size: 54px"></fa-icon>
+      </div>
+      <div class="h3">Welcome to my Appplication</div>
+      <div class="h6">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid,
+        harum!
+      </div>
+    </div>
+
+    <!-- Right Block-->
+    <div
+      class="col bg-light d-flex flex-column justify-content-center align-items-center"
+      [formGroup]="fbFormGroup"
+    >
+      <div class="alert alert-danger" role="alert" *ngIf="uiInvalidCredential">
+        A simple danger alert—check it out!
+      </div>
+
+      <div class="h4">Application Login</div>
+
+      <div>
+        <input
+          type="text"
+          placeholder="Enter Username"
+          class="form-control"
+          formControlName="username"
+        />
+      </div>
+
+      <div class="mt-1">
+        <input
+          type="password"
+          placeholder="Enter Password"
+          class="form-control"
+          formControlName="password"
+        />
+      </div>
+
+      <button
+        class="btn btn-sm btn-warning mt-1"
+        [disabled]="!fbFormGroup.valid"
+        (click)="loginProcessHere()"
+      >
+        Login Here
+      </button>
+    </div>
+  </div>
+</div>
