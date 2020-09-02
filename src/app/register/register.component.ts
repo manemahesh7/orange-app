@@ -12,6 +12,7 @@ import { faAirFreshener } from '@fortawesome/free-solid-svg-icons';
 })
 export class RegisterComponent implements OnInit {
   public faAirFreshener = faAirFreshener;
+  public uiInvalidCredential = false;
 
   public fbFormGroup = this.fb.group({
     username: ['', Validators.required],
