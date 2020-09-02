@@ -1,4 +1,28 @@
-<p>home works!</p>
+<div class="container-fluid">
+  <div class="row bg-warning" style="height: 55px">
+    <div class="col d-flex align-items-center">Orange App</div>
+    <div class="col d-flex justify-content-end align-items-center">
+      <button class="btn btn-outline-light mr-1" (click)="gotoPage('')">
+        Personal Info
+      </button>
+      <button
+        class="btn btn-outline-light mr-1"
+        (click)="gotoPage('education')"
+      >
+        Education
+      </button>
+      <button
+        class="btn btn-outline-light mr-1"
+        (click)="gotoPage('contact-us')"
+      >
+        Contact Us
+      </button>
+      <button class="btn btn-outline-light mr-1" (click)="processLogout()">
+        Log Out
+      </button>
+    </div>
+  </div>
+</div>
 
 <a routerLink="/home/">Personal </a>
 <a routerLink="/home/education">Education</a>
