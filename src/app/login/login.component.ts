@@ -4,6 +4,7 @@ import {} from '@fortawesome/free-regular-svg-icons';
 
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -19,16 +20,21 @@ export class LoginComponent implements OnInit {
     password: ['', Validators.required],
   });
 
-  constructor(private fb: FormBuilder, private router: Router) {}
+  constructor(
+    private fb: FormBuilder,
+    private router: Router,
+    private http: HttpClient
+  ) {}
 
   ngOnInit(): void {}
 
-  loginProcessHere() {
+  async loginProcessHere() {
     const data = this.fbFormGroup.value;
-    console.log(data);
 
     // ajax call
-    if (data.username === 'angular' && data.password === 'admin') {
+    const url = 'http://localhost:3000/auth-user';
+    const result: any = await this.http.post(url, data).toPromise();
+    if (result.opr) {
       sessionStorage.setItem('sid', 'true');
       this.router.navigate(['home']);
     } else {
