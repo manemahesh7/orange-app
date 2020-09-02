@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { PersonalInfoComponent } from './personal-info/personal-info.component';
 import { EducationComponent } from './education/education.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, RegisterComponent, PageNotFoundComponent, HomeComponent, PersonalInfoComponent, EducationComponent, ContactUsComponent],
@@ -22,6 +23,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     FontAwesomeModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
