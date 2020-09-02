@@ -2,21 +2,14 @@
   <div class="row bg-warning" style="height: 55px">
     <div class="col d-flex align-items-center">Orange App</div>
     <div class="col d-flex justify-content-end align-items-center">
-      <button class="btn btn-outline-light mr-1" (click)="gotoPage('')">
-        Personal Info
-      </button>
-      <button
-        class="btn btn-outline-light mr-1"
-        (click)="gotoPage('education')"
-      >
+      <a class="btn btn-outline-light mr-1" routerLink="/home/">Personal</a>
+      <a class="btn btn-outline-light mr-1" routerLink="/home/education">
         Education
-      </button>
-      <button
-        class="btn btn-outline-light mr-1"
-        (click)="gotoPage('contact-us')"
-      >
+      </a>
+      <a class="btn btn-outline-light mr-1" routerLink="/home/contact-us">
         Contact Us
-      </button>
+      </a>
+
       <button class="btn btn-outline-light mr-1" (click)="processLogout()">
         Log Out
       </button>
