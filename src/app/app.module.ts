@@ -14,9 +14,10 @@ import { PersonalInfoComponent } from './personal-info/personal-info.component';
 import { EducationComponent } from './education/education.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { LogoutModalComponent } from './logout-modal/logout-modal.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, RegisterComponent, PageNotFoundComponent, HomeComponent, PersonalInfoComponent, EducationComponent, ContactUsComponent],
+  declarations: [AppComponent, LoginComponent, RegisterComponent, PageNotFoundComponent, HomeComponent, PersonalInfoComponent, EducationComponent, ContactUsComponent, LogoutModalComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
