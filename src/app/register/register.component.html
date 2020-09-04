@@ -1,75 +1,89 @@
 <div class="container-fluid">
-  <div class="row" style="height: 100vh">
+  <div class="row no-gutters" style="height: 100vh">
     <!-- Left Block -->
-    <div
-      class="col bg-warning d-flex flex-column justify-content-center align-items-center"
-    >
-      <div>
-        <fa-icon [icon]="faAirFreshener" style="font-size: 54px"></fa-icon>
-      </div>
-      <div class="h3">Welcome to my Appplication</div>
-      <div class="h6">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid,
-        harum!
-      </div>
+    <div class="col-6">
+
+      <img class="img-fluid " src="./assets/music1.jpg" style=" width: 100vh;
+                  height: 100vh;
+                  object-fit: cover">
     </div>
 
     <!-- Right Block-->
-    <div
-      class="col bg-light d-flex flex-column justify-content-center align-items-center"
-      [formGroup]="fbFormGroup"
-    >
-      <div class="alert alert-danger" role="alert" *ngIf="uiInvalidCredential">
-        A simple danger alert—check it out!
+    <div class="col-6 " [formGroup]="fbFormGroup">
+      
+      <div class="row align-items-center justify-content-center"
+        style="height: 20%; background-color:rgb(63, 223, 215) ;">
+        <div style="font-weight: bold ; font-size: 80px; color:rgb(5, 0, 0)">NOX Music</div>
+
       </div>
 
-      <div class="h4">Application Register</div>
 
-      <div>
-        <input
-          type="text"
-          placeholder="Enter Username"
-          class="form-control"
-          formControlName="username"
-        />
+
+      <div class="row flex-column align-items-top  justify-content-center " style="height: 80%">
+        <div class="col-12 d-flex flex-column align-items-top  justify-content-center">
+          <div class="form-row justify-content-center align-items-center">
+            <div class="col-md-6">
+              <div style="font-style: initial; font-weight: bold ; font-size: 60px;display:flex;
+                          align-items:center;justify-content: center;">REGISTER</div>
+            </div>
+          </div>
+
+          <div class="form-row justify-content-center">
+            <div class="col-md-6">
+              <div style="font-style: initial; font-weight: bold ; font-size: 20px;">Username</div>
+              <input required type="text" placeholder="Username" class="form-control my-0.5 p-4" formControlName="username" />
+              
+            </div>
+          </div>
+
+          <div class="form-row justify-content-center">
+            <div class="col-md-6">
+              <div style="font-style: initial; font-weight: bold ; font-size: 20px;">Email-Address</div>
+              <input type="email" placeholder="Email-Address" class="form-control my-0.5 p-4" formControlName="email" />
+            </div>
+          </div>
+
+          <div class="form-row justify-content-center">
+            <div class="col-md-6">
+              <div style="font-style: initial; font-weight: bold ; font-size: 20px;">Password</div>
+              <input type="password" placeholder="Password" class="form-control my-0.5 p-4"
+                formControlName="password" />
+            </div>
+          </div>
+
+
+
+          <div class="form-row justify-content-center">
+            <div class="col-md-6">
+              <div style="font-style: initial; font-weight: bold ; font-size: 20px;">Mobile No.</div>
+              <input type="text" placeholder="Mobile No." class="form-control my-1 p-4" formControlName="mobile" />
+            </div>
+          </div>
+
+          <div class="form-row justify-content-center mt-1">
+            <div class="col-lg-6">
+              <button type="submit" class="btn1 " [disabled]="!fbFormGroup.valid"
+                (click)="registerHere()">REGISTER</button>
+            </div>
+          </div>
+
+
+          <div class="form-row justify-content-center">
+            <div class="col-lg-6">
+              <div>Already have an account?
+                <a routerLink="/login">Login Here.</a></div>
+            </div>
+          </div>
+
+
+
+
+
+        </div>
       </div>
 
-      <div class="mt-1">
-        <input
-          type="password"
-          placeholder="Enter Password"
-          class="form-control"
-          formControlName="password"
-        />
-      </div>
-
-      <div class="mt-1">
-        <input
-          type="text"
-          placeholder="Enter Email"
-          class="form-control"
-          formControlName="email"
-        />
-      </div>
-
-      <div class="mt-1">
-        <input
-          type="text"
-          placeholder="Enter Mobile"
-          class="form-control"
-          formControlName="mobile"
-        />
-      </div>
-
-      <button
-        class="btn btn-sm btn-warning mt-2 mb-2"
-        [disabled]="!fbFormGroup.valid"
-        (click)="registerHere()"
-      >
-        Register Here
-      </button>
-
-      <a routerLink="/login">Login Here</a>
     </div>
+
+
   </div>
 </div>

@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
   public uiInvalidCredential = false;
 
   public fbFormGroup = this.fb.group({
-    username: ['', Validators.required],
+    email: ['', Validators.required],
     password: ['', Validators.required],
   });
 
@@ -28,14 +28,14 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  async loginProcessHere() {
+  async loginHere() {
     const data = this.fbFormGroup.value;
 
     // ajax call
-    const url = 'http://localhost:3000/auth-user';
+    const url = 'http://localhost:3000/login';
     const result: any = await this.http.post(url, data).toPromise();
     if (result.opr) {
-      sessionStorage.setItem('sid', 'true');
+      sessionStorage.setItem('msm', 'true');
       this.router.navigate(['home']);
     } else {
       this.uiInvalidCredential = true;
